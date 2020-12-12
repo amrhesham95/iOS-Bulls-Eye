@@ -13,12 +13,17 @@ class ViewController: UIViewController {
     
     // MARK: - Outlets
     
+    @IBOutlet weak var slider: UISlider!
+    
     // MARK: - Properties
+    
     var sliderCurrentValue = 0
     
     // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        sliderCurrentValue = lroundf(slider.value)
         // Do any additional setup after loading the view.
     }
 
