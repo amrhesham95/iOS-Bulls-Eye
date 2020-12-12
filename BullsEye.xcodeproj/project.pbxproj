@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EF3B8F9025842F7A00B911E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3B8F8F25842F7A00B911E0 /* AppDelegate.swift */; };
-		EF3B8F9225842F7A00B911E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3B8F9125842F7A00B911E0 /* SceneDelegate.swift */; };
 		EF3B8F9425842F7A00B911E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3B8F9325842F7A00B911E0 /* ViewController.swift */; };
 		EF3B8F9725842F7A00B911E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3B8F9525842F7A00B911E0 /* Main.storyboard */; };
 		EF3B8F9925842F7E00B911E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3B8F9825842F7E00B911E0 /* Assets.xcassets */; };
@@ -140,7 +139,6 @@
 			files = (
 				EF3B8F9425842F7A00B911E0 /* ViewController.swift in Sources */,
 				EF3B8F9025842F7A00B911E0 /* AppDelegate.swift in Sources */,
-				EF3B8F9225842F7A00B911E0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
