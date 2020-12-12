@@ -18,12 +18,12 @@ class ViewController: UIViewController {
     // MARK: - Properties
     
     var sliderCurrentValue = 0
-    
+    var targetValue = 0
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sliderCurrentValue = lroundf(slider.value)
+        startNewRound()
         // Do any additional setup after loading the view.
     }
 
@@ -36,13 +36,17 @@ extension ViewController {
     
     // MARK: - Show Alert Action
     @IBAction func showAlert() {
-        let alert = UIAlertController(title: "Hello World!", message: "The slider value is: \(sliderCurrentValue)", preferredStyle: .alert)
+        let message = "The slider value is: \(sliderCurrentValue)" +
+                        "\n the target value is: \(targetValue)"
+        let alert = UIAlertController(title: "Hello World!", message: message, preferredStyle: .alert)
         
         let action = UIAlertAction(title: "OK!", style: .default, handler: nil)
         
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
+        
+        startNewRound()
     }
     
     // MARK: - Slider Moved Action
@@ -50,4 +54,16 @@ extension ViewController {
     @IBAction func sliderMoved(_ slider:UISlider) {
         sliderCurrentValue = lroundf(slider.value)
     }
+}
+
+// MARK: - Handlers
+//
+extension ViewController {
+    func startNewRound() {
+        sliderCurrentValue = lroundf(slider.value)
+        let minValue = lroundf(slider.minimumValue)
+        let maxValue = lroundf(slider.maximumValue)
+        targetValue = Int.random(in: minValue...maxValue)
+    }
+
 }
