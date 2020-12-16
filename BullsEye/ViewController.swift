@@ -45,8 +45,21 @@ extension ViewController {
         let points = 100 - difference
         totalScore += points
         
+        let title: String
+        
+        switch difference {
+        case 0:
+            title = "Perfect!"
+        case ..<5:
+            title = "You almost had it!"
+        case ..<0:
+            title = "Pretty good"
+        default:
+            title = "Not even close"
+        }
+        
         let message = "You scored \(points) points."
-        let alert = UIAlertController(title: "Hello World!", message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let action = UIAlertAction(title: "OK!", style: .default, handler: nil)
         
