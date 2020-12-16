@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startNewRound()
+        newGameButtonAction()
         // Do any additional setup after loading the view.
     }
 
@@ -72,6 +72,13 @@ extension ViewController {
     
     @IBAction func sliderMoved(_ slider:UISlider) {
         sliderCurrentValue = lroundf(slider.value)
+    }
+    
+    // MARK: - New Game Action
+    @IBAction func newGameButtonAction() {
+        totalScore = 0
+        roundCounter = 0
+        startNewRound()
     }
 }
 
