@@ -40,12 +40,11 @@ class ViewController: UIViewController {
 extension ViewController {
     
     // MARK: - Show Alert Action
-    @IBAction func showAlert() {
-        let difference = abs(targetValue - sliderCurrentValue)
-        let points = 100 - difference
-        totalScore += points
-        
+    @IBAction func showAlertThenStartNewRound() {
         let title: String
+        
+        let (points, difference) = getPointsAndDiffernce()
+        updateTotalScore(points: points)
         
         switch difference {
         case 0:
@@ -80,6 +79,8 @@ extension ViewController {
 // MARK: - Handlers
 //
 extension ViewController {
+    
+    // MARK: - startNewRound
     func startNewRound() {
         roundCounter += 1
         sliderCurrentValue = lroundf(slider.value)
@@ -87,6 +88,19 @@ extension ViewController {
         let maxValue = lroundf(slider.maximumValue)
         targetValue = Int.random(in: minValue...maxValue)
         configureView()
+    }
+    
+    // MARK: - getPoints
+    func getPointsAndDiffernce() -> (Int, Int) {
+        let difference = abs(targetValue - sliderCurrentValue)
+        let points = 100 - difference
+        return (points, difference)
+
+    }
+    
+    // MARK: - update score
+    func updateTotalScore(points: Int) {
+        totalScore += points
     }
 
 }
