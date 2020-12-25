@@ -9,6 +9,7 @@
 import UIKit
 
 //MARK: - ViewController
+//
 class ViewController: UIViewController {
     
     // MARK: - Outlets
@@ -24,11 +25,13 @@ class ViewController: UIViewController {
     var targetValue = 0
     var totalScore = 0
     var roundCounter = 0
+    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         newGameButtonAction()
+        configureSlider()
         // Do any additional setup after loading the view.
     }
 
@@ -118,5 +121,23 @@ extension ViewController {
         targetLabel.text = String(targetValue)
         scoreLabel.text = String(totalScore)
         roundLabel.text = String(roundCounter)
+    }
+    
+    func configureSlider() {
+        // setting slider cirle image
+        let thumbImageNormal = UIImage(named: "SliderThumb-Normal")!
+        slider.setThumbImage(thumbImageNormal, for: .normal)
+        let thumbImageHighlighted = UIImage(named: "SliderThumb-Highlighted")!
+        slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
+        
+        let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        
+        let trackLeftImage = UIImage(named: "SliderTrackLeft")!
+        let trackLeftResizable = trackLeftImage.resizableImage(withCapInsets:insets)
+        slider.setMinimumTrackImage(trackLeftResizable,for: .normal)
+        
+        let trackRightImage = UIImage(named: "SliderTrackRight")!
+        let trackRightResizable = trackRightImage.resizableImage(withCapInsets: insets)
+        slider.setMaximumTrackImage(trackRightResizable, for: .normal)
     }
 }
