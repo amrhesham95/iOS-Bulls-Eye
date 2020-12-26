@@ -28,7 +28,7 @@ class HighScoresViewController: UITableViewController {
 
 }
 
-// MARK: - TableView Methods
+// MARK: - UITableView DataSource
 //
 extension HighScoresViewController {
     
@@ -42,6 +42,15 @@ extension HighScoresViewController {
         return cell
     }
 }
+
+// MARK: - UITableView Delegate
+//
+extension HighScoresViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
 
 // MARK: - Configure
 //
