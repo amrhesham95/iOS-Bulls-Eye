@@ -15,14 +15,13 @@ class HighScoresViewController: UITableViewController {
     // MARK: - Outlets
     
     // MARK: - Properties
-    let names = ["The reader of the book", "Manda", "Joey", "Adam", "Eli"]
-    let scores = ["50000", "10000","5000", "1000", "500"]
+    var items: [HighScoreItem]?
     
     // MARK: - LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        reloadItems()
         // Do any additional setup after loading the view.
     }
 
@@ -33,7 +32,7 @@ class HighScoresViewController: UITableViewController {
 extension HighScoresViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        return items?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,7 +55,18 @@ extension HighScoresViewController {
 //
 extension HighScoresViewController {
     func configureCell(_ cell: HighScoreTableViewCell, indexPath: IndexPath) {
-        cell.nameLabel.text = names[indexPath.row]
-        cell.scoreLabel.text = scores[indexPath.row]
+        cell.nameLabel.text = items?[indexPath.row].name
+        cell.scoreLabel.text = String(items?[indexPath.row].score ?? 0)
+    }
+}
+
+// MARK: - Helpers
+extension HighScoresViewController {
+    func reloadItems() {
+        items = [
+            HighScoreItem(name: "Amr", score: 100),
+            HighScoreItem(name: "Ahmed", score: 200),
+            HighScoreItem(name: "Hassan", score: 300)
+        ]
     }
 }

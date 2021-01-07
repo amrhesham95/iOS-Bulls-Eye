@@ -12,6 +12,7 @@
 		EF3B8F9725842F7A00B911E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3B8F9525842F7A00B911E0 /* Main.storyboard */; };
 		EF3B8F9925842F7E00B911E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3B8F9825842F7E00B911E0 /* Assets.xcassets */; };
 		EF3B8F9C25842F7E00B911E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3B8F9A25842F7E00B911E0 /* LaunchScreen.storyboard */; };
+		EF7D382925A7A15B00490992 /* HighScoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7D382825A7A15B00490992 /* HighScoreItem.swift */; };
 		EFA88C992596811F0027FC68 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA88C972596811F0027FC68 /* AboutViewController.swift */; };
 		EFA88CA3259687F00027FC68 /* Bullseye.html in Resources */ = {isa = PBXBuildFile; fileRef = EFA88CA2259687F00027FC68 /* Bullseye.html */; };
 		EFD04E4825974094008E3474 /* HighScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD04E4725974094008E3474 /* HighScoresViewController.swift */; };
@@ -27,6 +28,7 @@
 		EF3B8F9825842F7E00B911E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF3B8F9B25842F7E00B911E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF3B8F9D25842F7E00B911E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF7D382825A7A15B00490992 /* HighScoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreItem.swift; sourceTree = "<group>"; };
 		EFA88C972596811F0027FC68 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		EFA88CA2259687F00027FC68 /* Bullseye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Bullseye.html; sourceTree = "<group>"; };
 		EFD04E4725974094008E3474 /* HighScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				EFA88CA2259687F00027FC68 /* Bullseye.html */,
 				EF3B8F9325842F7A00B911E0 /* ViewController.swift */,
 				EFD04E4725974094008E3474 /* HighScoresViewController.swift */,
+				EF7D382825A7A15B00490992 /* HighScoreItem.swift */,
 				EFD04E4A25974B44008E3474 /* HighScoreTableViewCell.swift */,
 				EFA88C972596811F0027FC68 /* AboutViewController.swift */,
 				EF3B8F8F25842F7A00B911E0 /* AppDelegate.swift */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFA88C992596811F0027FC68 /* AboutViewController.swift in Sources */,
+				EF7D382925A7A15B00490992 /* HighScoreItem.swift in Sources */,
 				EF3B8F9425842F7A00B911E0 /* ViewController.swift in Sources */,
 				EF3B8F9025842F7A00B911E0 /* AppDelegate.swift in Sources */,
 				EFD04E4825974094008E3474 /* HighScoresViewController.swift in Sources */,
